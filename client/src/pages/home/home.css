@@ -1,0 +1,91 @@
+.home-container {
+  max-width: 100vw;
+  height: 100vh;
+}
+
+.jumbotron {
+  background-image: url("../../images/toka.png");
+  background-size: cover;
+  height: 400px;
+  width: 75%;
+  margin: auto;
+  font-family: "Asap", sans-serif;
+}
+
+.jumbotron-text {
+  color: white;
+  font-size: 60px;
+}
+
+.jumbotron-subtitle {
+  color: white;
+  margin-top: 0px;
+}
+
+.fa-angle-down {
+  color: white;
+  font-size: 50px;
+  margin-top: -10px;
+}
+
+.arrow-text {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  padding-top: 10px;
+}
+
+.arrow-text:hover {
+  color: white;
+  font-size: 18px;
+}
+
+.jumbotron-link {
+  text-decoration: none;
+  width: 100%;
+}
+
+.jumbotron-link:hover {
+  text-decoration: none;
+}
+
+.jumbotron-button {
+  margin-top: 30px;
+  text-decoration: none;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.397);
+  text-align: center;
+  transition: 0.3s ease-in-out;
+}
+
+.jumbotron-button:hover {
+  background-color: rgba(0, 0, 0, 0.644);
+  transition: 0.3s ease-in-out;
+}
+
+.col--1 {
+  /* background: green; */
+  color: #e18c2b;
+}
+
+.col--2 {
+  /* background: blue; */
+  text-align: right;
+  display: block;
+}
+
+.container--1 {
+  /* background: red; */
+}
+
+.zero {
+  position: relative;
+  right: 0px;
+  text-align: center;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.test-text {
+  /* background: grey; */
+}
