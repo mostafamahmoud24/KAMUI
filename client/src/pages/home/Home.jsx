@@ -7,6 +7,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchUsers } from "../../redux/user/userActions";
 import { fetchTrendingAnime } from "../../redux/anime/animeActions";
 import CarouselBootstrap from "../../components/carousel/CarouselBootstrap";
+import GlitchButton from "../../components/buttons/GlitchButton";
 
 export default function Home(props) {
   const dispatch = useDispatch();
@@ -31,10 +32,10 @@ export default function Home(props) {
   return (
     <div className="home-container">
       <Navbar />
-      <br />
-      <br />
       <div className="jumbotron">
-        <h1 className="jumbotron-text">Discover New</h1>
+        <br />
+        <br />
+        <h1 className="jumbotron-text mt-5">Discover New</h1>
         <h1 className="jumbotron-text">anime & Manga</h1>
         <div className="jumbotron-subtitle">
           Track your watched anime and create your own anime list
@@ -43,21 +44,15 @@ export default function Home(props) {
           choosing from a plethora of old and new anime that is updated
           regularly
         </div>
-        <a href="#see-more" className="jumbotron-link">
-          <div className="jumbotron-button">
-            <div className="arrow-text">See more</div>
-            <i className="fa fa-angle-down" aria-hidden="true"></i>
-          </div>
-        </a>
-      </div>
-      <br />
-      <div className="container-fluid w-75">
-        <div className="row">
-          <div className="col-7"></div>
-          <div className="col-5">
-            <CarouselBootstrap slides={trendingAnime.data} />
-          </div>
+        <div className="jumbotron-cyber-button-container">
+          <GlitchButton text="SEE MORE" />
         </div>
+      </div>
+      <div className="container-fluid trending-anime-text">
+        <h2 style={{ color: "rgb(255, 255, 0)" }}>Trending Anime</h2>
+      </div>
+      <div className="container-fluid w-100">
+        <CarouselBootstrap slides={trendingAnime.data} />
       </div>
 
       <br />

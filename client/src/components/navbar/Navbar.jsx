@@ -57,7 +57,7 @@ export default function Navbar() {
   return (
     <div className="navabr-container" id="navabr-container">
       <div className="logo">
-        <img className="kanji" src={require("../../images/logo.png")} alt="" />
+        <img className="kanji" src={require("../../images/logo1.png")} alt="" />
       </div>
       <div className="nav-list">
         <div className="nav-list-cont">

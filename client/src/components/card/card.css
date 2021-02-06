@@ -14,10 +14,10 @@
 
 .card-image {
   object-fit: cover;
-  width: 200px !important;
+  /* width: 200px !important; */
   margin: auto !important;
-  height: 200px;
-  border-radius: 100% !important;
+  /* height: 200px; */
+  /* border-radius: 100% !important; */
 }
 
 .card-text {

@@ -1,36 +1,80 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
+import CardComponent from "../card/Card";
+import "./carouselComponent.css";
 
 export default function CarouselBootstrap(props) {
   const slides = props.slides;
-  console.log(slides);
   return (
     <div>
-      <Carousel pause="hover" fade={true} touch={true} className="w-100">
-        {slides &&
-          slides.map((slide, index) => (
-            <Carousel.Item key={index} interval={500}>
-              <img
-                className="d-block w-100 m-auto"
-                src={slide.attributes.posterImage.large}
-                alt={slide.attributes.canonicalTitle}
-              />
-              <Carousel.Caption>
-                <div
-                  style={{
-                    background: "rgba(0, 0, 0, 0.7)",
-                    width: "100%",
-                    margin: "auto",
-                    paddingTop: "5px",
-                    paddingBottom: "5px",
-                  }}
-                >
-                  <h3 style={{ opacity: "1" }}>{slide.attributes.titles.en}</h3>
-                </div>
-              </Carousel.Caption>
+      {slides && (
+        <div>
+          <Carousel
+            pause="hover"
+            touch={true}
+            className="w-100"
+            wrap={true}
+            indicators={false}
+            prevIcon={
+              <i className="fas fa-chevron-left fa-2x carousel-control-icon"></i>
+            }
+            nextIcon={
+              <i className="fas fa-chevron-right fa-2x carousel-control-icon"></i>
+            }
+            interval={null}
+          >
+            <Carousel.Item>
+              <div className="d-flex container-fluid cardComponent pt-5 pb-5">
+                {slides.slice(0, 7).map((slide, index) => (
+                  <a href="#" className="cardHover" key={index}>
+                    <CardComponent
+                      key={index}
+                      img={slide.attributes.posterImage.large}
+                      title={slide.attributes.canonicalTitle}
+                      date={slide.attributes.startDate.slice(0, 4)}
+                    />
+                  </a>
+                ))}
+              </div>
             </Carousel.Item>
-          ))}
-      </Carousel>
+            <Carousel.Item>
+              <div className="d-flex container-fluid cardComponent pt-5 pb-5">
+                {slides.slice(7, 14).map((slide, index) => (
+                  <a href="#" className="cardHover" key={index}>
+                    <CardComponent
+                      key={index}
+                      img={slide.attributes.posterImage.large}
+                      title={slide.attributes.canonicalTitle}
+                      date={slide.attributes.startDate.slice(0, 4)}
+                    />
+                  </a>
+                ))}
+              </div>
+            </Carousel.Item>
+            <Carousel.Item>
+              <div className="d-flex container-fluid cardComponent pt-5 pb-5">
+                {slides.slice(14, 20).map((slide, index) => (
+                  <a href="#" className="cardHover" key={index}>
+                    <CardComponent
+                      key={index}
+                      img={slide.attributes.posterImage.large}
+                      title={slide.attributes.canonicalTitle}
+                      date={slide.attributes.startDate.slice(0, 4)}
+                    />
+                  </a>
+                ))}
+                <a href="#" className="cardHover">
+                  <CardComponent
+                    img={slides[0].attributes.posterImage.large}
+                    title={slides[0].attributes.canonicalTitle}
+                    date={slides[0].attributes.startDate.slice(0, 4)}
+                  />
+                </a>
+              </div>
+            </Carousel.Item>
+          </Carousel>
+        </div>
+      )}
     </div>
   );
 }

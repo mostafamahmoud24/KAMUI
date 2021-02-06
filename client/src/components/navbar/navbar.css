@@ -5,20 +5,25 @@
   position: relative;
   top: 0px;
   margin: 0px;
-  background-image: url("../../images/cyberpunk\ solid\ background.jpg");
+  /* background-image: url("../../images/cyberpunk\ solid\ background.jpg"); */
+  /* background: ###15415c; */
+  position: fixed;
+  top: 0;
+  width: 100%;
   z-index: 1;
 }
 
 .nav-list-cont {
   display: flex;
-  color: aqua;
+  color: #15415c;
   position: relative;
-  top: 50%;
+  top: 30%;
   /* display: none; */
 }
 
 .list-item {
-  color: aqua;
+  color: #15415c;
+  font-weight: 500;
   margin-left: 60px;
   font-size: 18px;
   letter-spacing: 2px;
@@ -28,7 +33,7 @@
 }
 
 .avatar-item {
-  color: aqua;
+  color: #15415c;
   margin-left: 60px;
   font-size: 18px;
   letter-spacing: 2px;
@@ -38,20 +43,20 @@
 }
 
 .list-item:hover {
-  color: aqua;
+  color: #15415c;
   cursor: pointer;
   text-decoration: none;
   animation-name: list-item;
   animation: list-item 1s ease-in-out infinite alternate;
-  text-shadow: 0px 0px 6px aqua, 0px 0px 12px aqua, 0px 0px 24px aqua,
-    0px 0px 48px aqua;
+  /* text-shadow: 0px 0px 3px aqua, 0px 0px 6px aqua, 0px 0px 12px aqua,
+    0px 0px 24px aqua; */
   transition: ease-in-out 0.25s;
 }
 
 .list-item:after {
   display: block;
   content: "";
-  border-bottom: solid 2px #fc00de;
+  border-bottom: solid 2px rgb(250, 60, 91);
   transform: scaleX(0);
   transition: transform 250ms ease-in-out;
   margin-top: 6px;
@@ -69,17 +74,17 @@
 .logo {
   color: aqua;
   font-size: 40px;
-  margin-left: 15%;
+  margin-left: 5%;
   transition: 0.2s ease-in-out;
 }
 
 .nav-list {
-  margin-right: 15%;
+  margin-right: 5%;
   transition: 0.3s ease-in-out;
 }
 
 .kanji {
-  width: 150px;
+  width: 200px;
   transition: 0.3s ease-in-out;
 }
 

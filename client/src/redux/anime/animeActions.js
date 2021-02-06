@@ -27,7 +27,7 @@ export const fetchAnimeFailure = (error) => {
 export const fetchTrendingAnime = () => {
   return (dispatch) => {
     dispatch(fetchAnimeRequest);
-    fetch(`https://kitsu.io/api/edge/trending/anime`)
+    fetch(`https://kitsu.io/api/edge/anime?page%5Blimit%5D=20&sort=ratingRank`)
       .then((res) => res.json())
       .then((data) => {
         const trending_anime = data;
