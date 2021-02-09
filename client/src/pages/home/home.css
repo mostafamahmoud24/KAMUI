@@ -17,6 +17,7 @@
   width: 100%;
   margin: auto;
   font-family: "Cyber", sans-serif;
+  border-radius: 0px !important;
 }
 
 .jumbotron-text {

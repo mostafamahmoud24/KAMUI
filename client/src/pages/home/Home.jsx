@@ -5,7 +5,7 @@ import "./home.css";
 import { setCookie } from "../../utils/cookies";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchUsers } from "../../redux/user/userActions";
-import { fetchTrendingAnime } from "../../redux/anime/animeActions";
+import { fetchAnime } from "../../redux/anime/animeActions";
 import CarouselBootstrap from "../../components/carousel/CarouselBootstrap";
 import GlitchButton from "../../components/buttons/GlitchButton";
 
@@ -22,12 +22,16 @@ export default function Home(props) {
   }, [props.location.search, props.history, dispatch]);
 
   useEffect(() => {
-    dispatch(fetchTrendingAnime());
+    dispatch(
+      fetchAnime({
+        resource: "fetchTrendingAnime",
+        page_limit: "20",
+        sort_desc: "ratingRank",
+      })
+    );
   }, [dispatch]);
 
   const trendingAnime = useSelector((state) => state.anime.trendingAnime);
-
-  console.log(trendingAnime.data);
 
   return (
     <div className="home-container">

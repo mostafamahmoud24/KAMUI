@@ -5,6 +5,7 @@ import "./carouselComponent.css";
 
 export default function CarouselBootstrap(props) {
   const slides = props.slides;
+  console.log(typeof slides);
   return (
     <div>
       {slides && (
@@ -26,7 +27,7 @@ export default function CarouselBootstrap(props) {
             <Carousel.Item>
               <div className="d-flex container-fluid cardComponent pt-5 pb-5">
                 {slides.slice(0, 7).map((slide, index) => (
-                  <a href="#" className="cardHover" key={index}>
+                  <a href={"/" + slide.id} className="cardHover" key={index}>
                     <CardComponent
                       key={index}
                       img={slide.attributes.posterImage.large}
@@ -40,7 +41,7 @@ export default function CarouselBootstrap(props) {
             <Carousel.Item>
               <div className="d-flex container-fluid cardComponent pt-5 pb-5">
                 {slides.slice(7, 14).map((slide, index) => (
-                  <a href="#" className="cardHover" key={index}>
+                  <a href={"/" + slide.id} className="cardHover" key={index}>
                     <CardComponent
                       key={index}
                       img={slide.attributes.posterImage.large}
@@ -54,7 +55,7 @@ export default function CarouselBootstrap(props) {
             <Carousel.Item>
               <div className="d-flex container-fluid cardComponent pt-5 pb-5">
                 {slides.slice(14, 20).map((slide, index) => (
-                  <a href="#" className="cardHover" key={index}>
+                  <a href={"/" + slide.id} className="cardHover" key={index}>
                     <CardComponent
                       key={index}
                       img={slide.attributes.posterImage.large}
@@ -63,7 +64,7 @@ export default function CarouselBootstrap(props) {
                     />
                   </a>
                 ))}
-                <a href="#" className="cardHover">
+                <a href={"/" + slides[0].id} className="cardHover">
                   <CardComponent
                     img={slides[0].attributes.posterImage.large}
                     title={slides[0].attributes.canonicalTitle}

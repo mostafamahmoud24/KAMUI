@@ -29,7 +29,7 @@ export default function Navbar() {
         box.classList.remove("nav-list-burger-opened");
         box.classList.add("nav-list-burger-closed");
         document.getElementById("root").style.overflowY = "unset";
-        document.getElementById("root").style.overflowX = "unset";
+        document.getElementById("root").style.overflowX = "hidden";
       }
     });
   }
